@@ -3,7 +3,7 @@ let path = './pages/';
 let location = window.location.pathname;
 
 if(location.split('/')[2] === 'pages'){
-    path = '../pages/'
+    path = './'
 }
 
 if (!user) {
