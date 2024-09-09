@@ -9,7 +9,7 @@ form.onsubmit = (e) => {
     const isValidUser = users.find(u => u.email===email && u.password===password);
 
     if(!isValidUser){
-        return alert('error');
+        return alert('Email o contraseña errada');
     }
     
     alert(`Bienvenido `)
