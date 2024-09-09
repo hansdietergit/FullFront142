@@ -1,13 +1,14 @@
 const user = JSON.parse(localStorage.getItem('login_success')) || false;
-let path = './pages/';
-let location = window.location.pathname;
+let path = '/pages/';
+let locationPath = window.location.pathname;
 
-if(location.split('/')[2] === 'pages'){
-    path = './'
+if(locationPath.split('/')[2] === 'pages'){
+    path = '/'
 }
+let url = path + 'login.html';
 
 if (!user) {
-    window.location.href = path + 'login.html';
+    window.location.pathname = url;
 }
 
 const logout = document.getElementById('logout');
@@ -15,5 +16,5 @@ const logout = document.getElementById('logout');
 logout.onclick = () => {
     alert('sesion finalizada')
     localStorage.removeItem('login_success')
-    window.location.href = path + 'login.html';
+    window.location.pathname = url;
 }
