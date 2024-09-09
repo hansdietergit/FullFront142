@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>modulo clientes</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="module" src="../js/main.js"></script>
+  <script type="module" src="../js/navbar.js"></script>
+  <script src="../js/request.js"></script>
+  <script src="../js/clientes.js"></script>
+  <script type="module">
+    showData();
+  </script>
+</head>
+
+<body>
+
+  <div class="overlay">
+    <header id="header">
+      <div class="con-header con-header-img" id="con-header"></div>
+
+      <div class="con-navbar">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="#">MDCN</a>
+          </div>
+          <div class="menu-toggle" id="menu-toggle">
+            <p>&#9776;</p>
+          </div>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="./clientes.html">Clientes</a></li>
+            <li><a href="./productos.html">Productos</a></li>
+            <li><a href="./citas.html">Citas</a></li>
+            <li><a href="./formulas.html">Formulas</a></li>
+            <li><button type="button" class="btn btn-dark" id="logout">Logout</button></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div>
+        <h1>Clientes</h1>
+      </div>
+      <div class="con-btn">
+        <button class="btn btn-chart-1" onclick="window.location='./form-clientes.html'">Nuevo</button>
+      </div>
+      <div class="con-main">
+        <table id="table-main" class="tablew">
+          <thead>
+            <tr>
+              <th>Acciones</th>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Documentos</th>
+              <th>Correo</th>
+              <th>Teléfono</th>
+              <th>Dirección</th>
+            </tr>
+          </thead>
+          <tbody id="table-body-main">
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="con-footer">
+        <p>&copy; Hans 2024</p>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

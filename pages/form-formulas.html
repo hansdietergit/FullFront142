@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modulo formulas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/navbar.js"></script>
+    <script src="../js/request.js"></script>
+    <script src="../js/formulas.js"></script>
+    <script type="module">
+        let btn = document.getElementById('btn-guardar')
+        const u = new URLSearchParams(window.location.search)
+        const id = u.get('id') !== null ? u.get('id') : '';
+        btn.onclick = () => {
+            saveReq(id);
+        };
+        if (id !== '') {
+            loadReq(id);
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="overlay">
+
+        <header id="header">
+            <div class="con-header con-header-img" id="con-header"></div>
+
+            <div class="con-navbar">
+                <nav class="navbar">
+                    <div class="logo">
+                        <a href="#">MDCN</a>
+                    </div>
+                    <div class="menu-toggle" id="menu-toggle">
+                        <p>&#9776;</p>
+                    </div>
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="./clientes.html">Clientes</a></li>
+                        <li><a href="./productos.html">Productos</a></li>
+                        <li><a href="./citas.html">Citas</a></li>
+                        <li><a href="./formulas.html">Formulas</a></li>
+                        <li><button type="button" class="btn btn-dark" id="logout">Logout</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main">
+            <div>
+                <h1>Formulas</h1>
+            </div>
+            <div class="con-main con-main-form" id="con-main">
+                <div>
+                    <lable for="farmaco">Farmaco</lable>
+                    <input id="farmaco" name="farmaco">
+                </div>
+                <div>
+                    <lable for="cantidad">Cantidad</lable>
+                    <input id="cantidad" name="cantidad">
+                </div>
+                <div>
+                    <lable for="estado">Estado</lable>
+                    <input id="estado" name="estado">
+                </div>
+                <div>
+                    <lable for="observaciones">Observaciones</lable>
+                    <input id="observaciones" name="observaciones">
+                </div>
+                <div>
+                    <button id="btn-guardar" type="button" class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </main>
+
+        <footer id="footer">
+            <div class="con-footer">
+                <p>&copy; Hans 2024</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
